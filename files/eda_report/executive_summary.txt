@@ -1,0 +1,80 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                       EXECUTIVE SUMMARY                                   ║
+║  Customer Engagement & Product Utilization Analytics for Retention         ║
+║  European Bank Dataset (Year 2025, N = 10,000)                            ║
+║  Prepared for: European Central Bank & Government Stakeholders             ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+PURPOSE
+──────────────────────────────────────────────────────────────────────────────
+Data-driven analysis of customer churn at a European bank. 10,000 customers
+across France, Spain, and Germany. Focus: behavioural engagement and product
+usage — not demographics — as the primary drivers of retention.
+
+SCALE OF THE CHALLENGE
+──────────────────────────────────────────────────────────────────────────────
+  • 2,037 customers (20.37%) churned — nearly 1 in 5.
+  • 4,849 customers (48.5%) are currently inactive.
+  • 3,617 customers (36.2%) hold zero balance.
+  • 621 premium customers are disengaged — highest silent churn risk.
+
+KEY FINDINGS
+──────────────────────────────────────────────────────────────────────────────
+
+  1. ENGAGEMENT RETENTION RATIO: 1.88×
+     Active churn: 14.27%  |  Inactive churn: 26.85%
+
+  2. THE 3-PRODUCT CLIFF
+     2-product churn: 7.58% (optimal)  |  3+: 85.89% (critical failure)
+
+  3. GERMANY REGIONAL RISK
+     Germany: 32.44%
+     Spain: 16.67%
+     France: 16.15%
+
+  4. GENDER CHURN GAP
+     Female: 25.07%
+     Male: 16.46%
+
+  5. CREDIT CARD STICKINESS: 0.63 pp
+     Card holders: 20.18%  |  No card: 20.81%
+
+  6. HIGH-BALANCE DISENGAGEMENT: 49.88%
+     49.88% of premium customers inactive. Balance ≠ loyalty.
+
+  7. STICKY RETENTION ADVANTAGE: 17.63 pp
+     Sticky: 5.05%  |  Non-Sticky: 22.68%
+
+STRATEGIC RECOMMENDATIONS
+──────────────────────────────────────────────────────────────────────────────
+
+  P1 — INACTIVE RE-ENGAGEMENT [IMMEDIATE]
+       Target 4,849 inactive members. Trigger: 90+ day inactivity.
+
+  P2 — 3-PRODUCT BUNDLE AUDIT [URGENT]
+       3+ products = 85.89% churn. Audit and redesign all bundles.
+
+  P3 — PREMIUM SILENT CHURN PROGRAMME [HIGH VALUE]
+       Assign relationship managers to 621 at-risk premium customers.
+
+  P4 — GERMANY REGIONAL PROGRAMME [STRATEGIC]
+       Germany at 32.44% churn. Local product audit + dedicated support.
+
+  P5 — GENDER-RESPONSIVE ENGAGEMENT [SCALABLE]
+       Female churn 25.07% vs male 16.46%. Targeted campaigns needed.
+
+  P6 — CREDIT CARD ACQUISITION PUSH [LONG-TERM]
+       Only 71% hold a card. Offer first-year fee waivers.
+
+  P7 — RSI CRM INTEGRATION [SYSTEMIC]
+       Flag RSI < 30 for monthly automated outreach.
+
+CONCLUSION
+──────────────────────────────────────────────────────────────────────────────
+Engagement and product alignment — not balance — drive retention.
+Three priorities demand immediate action: inactivity gap, 3-product cliff,
+and Germany regional risk. The KPI framework is ready for CRM integration.
+
+──────────────────────────────────────────────────────────────────────────────
+European_Bank.csv | Year 2025 | Unified Mentor — European Central Bank
+──────────────────────────────────────────────────────────────────────────────

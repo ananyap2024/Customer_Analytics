@@ -1,0 +1,199 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║  CUSTOMER ENGAGEMENT & PRODUCT UTILIZATION ANALYTICS                      ║
+║  FOR RETENTION STRATEGY — EDA RESEARCH REPORT                             ║
+║  Source: European_Bank.csv  |  Year: 2025  |  N = 10,000                 ║
+║  Unified Mentor: European Central Bank                                    ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+══════════════════════════════════════════════════════════════════════════════
+  1. DATASET OVERVIEW & VALIDATION
+══════════════════════════════════════════════════════════════════════════════
+  Total Customers          : 10,000
+  Churned Customers        : 2,037  (20.37%)
+  Retained Customers       : 7,963
+  Active Members           : 5,151  (51.5%)
+  Inactive Members         : 4,849  (48.5%)
+  Zero Balance Customers   : 3,617  (36.2%)
+  Avg Products per Customer: 1.53
+  Avg Account Balance      : €76,485.89
+  Has Credit Card          : 7,055  (70.5%)
+  Missing Values           : 0  ✓ Clean dataset
+  Dataset Year             : 2025
+
+  Geography Distribution:
+    France    : 5,014 (50.1%)
+    Germany   : 2,509 (25.1%)
+    Spain     : 2,477 (24.8%)
+
+  Descriptive Statistics:
+       CreditScore       Age    Tenure    Balance  NumOfProducts  EstimatedSalary
+count     10000.00  10000.00  10000.00   10000.00       10000.00         10000.00
+mean        650.53     38.92      5.01   76485.89           1.53        100090.24
+std          96.65     10.49      2.89   62397.41           0.58         57510.49
+min         350.00     18.00      0.00       0.00           1.00            11.58
+25%         584.00     32.00      3.00       0.00           1.00         51002.11
+50%         652.00     37.00      5.00   97198.54           1.00        100193.92
+75%         718.00     44.00      7.00  127644.24           2.00        149388.25
+max         850.00     92.00     10.00  250898.09           4.00        199992.48
+
+══════════════════════════════════════════════════════════════════════════════
+  2. ENGAGEMENT CLASSIFICATION
+══════════════════════════════════════════════════════════════════════════════
+    EngagementProfile  Total  Churned  ChurnRate
+Inactive High-Balance   2923      921      31.51
+  Inactive Disengaged   1926      381      19.78
+   Active Low-Product   2563      485      18.92
+       Active Engaged   2588      250       9.66
+
+  ERR: Active=14.27%  |  Inactive=26.85%  |  Ratio=1.88×
+
+  Gender Churn:
+Gender  Total  Churned  ChurnRate
+Female   4543     1139      25.07
+  Male   5457      898      16.46
+
+  Age Group Churn:
+AgeGroup  Total  Churned  ChurnRate
+   18-25    611       46       7.53
+   26-35   3542      301       8.50
+   36-45   3736      733      19.62
+   46-55   1311      663      50.57
+   56-65    536      259      48.32
+     66+    264       35      13.26
+
+  Tenure Churn:
+TenureBucket  Total  Churned  ChurnRate
+      0-1 yr   1448      327      22.58
+      2-3 yr   2057      414      20.13
+      4-5 yr   2001      412      20.59
+      6-7 yr   1995      373      18.70
+     8-10 yr   2499      511      20.45
+
+══════════════════════════════════════════════════════════════════════════════
+  3. PRODUCT UTILIZATION — THE 3-PRODUCT CLIFF
+══════════════════════════════════════════════════════════════════════════════
+ NumOfProducts  Total  Churned  ChurnRate  RetentionRate
+             1   5084     1409      27.71          72.29
+             2   4590      348       7.58          92.42
+             3    266      220      82.71          17.29
+             4     60       60     100.00           0.00
+
+  1-Product: 27.71%  |  2-Product: 7.58% (OPTIMAL)  |  3+: 85.89% (CLIFF)
+  PDI: 1.047
+
+  Geography Churn:
+Geography  Total  Churned  ChurnRate
+  Germany   2509      814      32.44
+    Spain   2477      413      16.67
+   France   5014      810      16.15
+
+  CC Stickiness: Card=20.18%  |  No Card=20.81%  |  Score=0.63 pp
+
+══════════════════════════════════════════════════════════════════════════════
+  4. FINANCIAL COMMITMENT VS ENGAGEMENT
+══════════════════════════════════════════════════════════════════════════════
+  HBDR: Threshold=€127,644  |  Inactive=49.88%  |  Churn=23.68%
+
+  Balance × Activity Matrix:
+  BalanceSegment Activity  Total  Churned  ChurnRate
+    Zero Balance Inactive   1744      320      18.35
+    Zero Balance   Active   1873      180       9.61
+     Low (1–50K) Inactive     35       18      51.43
+     Low (1–50K)   Active     40        8      20.00
+Medium (50–100K) Inactive    714      192      26.89
+Medium (50–100K)   Active    795      108      13.58
+ High (100–175K) Inactive   2239      730      32.60
+ High (100–175K)   Active   2329      413      17.73
+ Premium (175K+) Inactive    117       42      35.90
+ Premium (175K+)   Active    114       26      22.81
+
+  Credit Score Bands:
+         CreditBand  Total  Churned  ChurnRate
+Very Poor (350-500)    643      152      23.64
+     Fair (501-600)   2423      513      21.17
+     Good (601-700)   3818      753      19.72
+Very Good (701-800)   2471      492      19.91
+Excellent (801-850)    645      127      19.69
+
+  Salary–Balance Mismatch:
+              MismatchRisk  Total  Churned  ChurnRate
+High Salary – Zero Balance    891      132      14.81
+                    Normal   9109     1905      20.91
+
+  At-Risk Premium: 621 customers  |  Churn rate: 31.56%
+
+══════════════════════════════════════════════════════════════════════════════
+  5. RETENTION STRENGTH ASSESSMENT
+══════════════════════════════════════════════════════════════════════════════
+  Sticky (Active+2prod+CC+3yr): 1,308 customers
+  Sticky Churn: 5.05%  |  Non-Sticky: 22.68%  |  Advantage: 17.63 pp
+
+  RSI Tier Churn:
+  RSI_Tier  Total  Churned  ChurnRate  RetentionRate
+      Weak   1459      578      39.62          60.38
+Developing   3911      913      23.34          76.66
+    Strong   3502      487      13.91          86.09
+  Champion   1128       59       5.23          94.77
+
+  Chi-Squared (Activity vs Churn): χ²=242.9853  p=0.00000000  → Highly Significant
+  Point-Biserial (Products vs Churn): r=-0.0478  p=0.000002
+
+══════════════════════════════════════════════════════════════════════════════
+  6. KEY PERFORMANCE INDICATORS
+══════════════════════════════════════════════════════════════════════════════
+                         KPI      Value                                                    Description
+  Engagement Retention Ratio      1.88× Inactive customers churn this many times more than active ones
+    Active Member Churn Rate     14.27%                            Churn rate among IsActiveMember = 1
+  Inactive Member Churn Rate     26.85%                            Churn rate among IsActiveMember = 0
+         Product Depth Index      1.047               Avg products (retained) / Avg products (churned)
+Credit Card Stickiness Score    0.63 pp    Churn reduction (pp) for credit card holders vs non-holders
+High-Balance Disengagement %     49.88%           % of top-quartile balance customers who are inactive
+     High-Balance Churn Rate     23.68%                      Churn rate in the premium balance segment
+  Sticky Customer Churn Rate      5.05%    Churn among active + 2 products + credit card + 3yr+ tenure
+       Non-Sticky Churn Rate     22.68%              Churn among customers not meeting sticky criteria
+Retention Advantage (Sticky)   17.63 pp         Percentage-point improvement of sticky over non-sticky
+   Avg Relationship Strength 42.5 / 100                            Mean RSI score across all customers
+
+══════════════════════════════════════════════════════════════════════════════
+  7. INSIGHTS & RECOMMENDATIONS
+══════════════════════════════════════════════════════════════════════════════
+
+  ► INSIGHT 1 — Engagement is the #1 Retention Driver
+    Inactive customers churn 1.88× more than active ones (ERR=1.88×).
+
+  ► INSIGHT 2 — The 3-Product Cliff
+    Churn spikes to 85.89% at 3+ products vs 7.58% at 2.
+
+  ► INSIGHT 3 — Germany Has the Highest Churn
+    German customers show 32.44% churn — double France/Spain. Needs regional action.
+
+  ► INSIGHT 4 — Female Customers Churn More
+    Female churn (25.07%) is significantly higher than male (16.46%).
+
+  ► INSIGHT 5 — High Balance ≠ Loyalty
+    49.88% of premium customers are inactive — silent churn risk.
+
+  ► REC 1 — Re-engage inactive members immediately
+    Target 4,849 inactive members with personalised campaigns.
+
+  ► REC 2 — Audit 3+ product bundles
+    Fix the 3-product cliff — 85.89% churn is a product design failure.
+
+  ► REC 3 — Premium silent churn programme
+    Assign relationship managers to 621 at-risk premium customers.
+
+  ► REC 4 — Germany regional retention programme
+    Investigate and fix product-market fit in Germany specifically.
+
+  ► REC 5 — Integrate RSI into CRM
+    Flag all customers with RSI < 30 for automated monthly outreach.
+
+══════════════════════════════════════════════════════════════════════════════
+  8. CONCLUSION
+══════════════════════════════════════════════════════════════════════════════
+  Churn is a behavioural phenomenon. Engagement depth, product alignment,
+  and relationship strength — not wealth — determine loyalty.
+  The 3-product cliff and Germany gap are the two highest-priority fixes.
+══════════════════════════════════════════════════════════════════════════════
+  European_Bank.csv | Year 2025 | Unified Mentor — European Central Bank
+══════════════════════════════════════════════════════════════════════════════

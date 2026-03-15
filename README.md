@@ -22,8 +22,7 @@
 12. [How to Run](#12-how-to-run)
 13. [How Files Connect](#13-how-files-connect)
 14. [Deliverables](#14-deliverables)
-15. [Strategic Recommendations](#15-strategic-recommendations)
-16. [Technologies Used](#16-technologies-used)
+15. [Technologies Used](#16-technologies-used)
 
 ---
 
@@ -350,21 +349,7 @@ visualizations.py ─────── turns data into Plotly charts
 
 ---
 
-## 15. Strategic Recommendations
-
-| Priority | Recommendation | Target | Impact |
-|---|---|---|---|
-| 🔴 P1 | Re-engage inactive members with personalised campaigns | 4,849 inactive customers | High |
-| 🔴 P2 | Audit and redesign all 3+ product bundles | 326 customers on 3–4 products | High |
-| 🟠 P3 | Premium silent churn prevention programme | 621 at-risk premium customers | High |
-| 🟠 P4 | Germany-specific regional retention initiative | 2,509 German customers | Medium |
-| 🟡 P5 | Gender-responsive engagement strategy | Female customer segment | Medium |
-| 🟡 P6 | Credit card acquisition push | 2,945 non-card holders | Medium |
-| 🟢 P7 | Integrate RSI scoring into CRM for live monitoring | All 10,000 customers | Long-term |
-
----
-
-## 16. Technologies Used
+## 15. Technologies Used
 
 | Technology | Purpose |
 |---|---|

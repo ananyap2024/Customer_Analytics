@@ -22,7 +22,7 @@ st.set_page_config(page_title="Retention Scoring", page_icon="🏆", layout="wid
 
 @st.cache_data
 def get_data():
-    df = load_data(os.path.join(os.path.dirname(__file__), "bank_churn.csv"))
+    df = load_data(os.path.join(os.path.dirname(__file__), "..", "bank_churn.csv"))
     df = classify_engagement(df)
     df = relationship_strength_index(df)
     df = define_sticky_customers(df)

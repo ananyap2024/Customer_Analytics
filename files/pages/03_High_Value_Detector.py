@@ -25,7 +25,7 @@ st.set_page_config(page_title="High-Value Detector", page_icon="🔍", layout="w
 
 @st.cache_data
 def get_data():
-    df = load_data("bank_churn.csv")
+    df = load_data(os.path.join(os.path.dirname(__file__), "bank_churn.csv"))
     return classify_engagement(df)
 
 df_raw = get_data()

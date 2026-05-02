@@ -144,7 +144,7 @@ with st.expander("🔎 Preview Raw Dataset (first 50 rows)"):
             "EngagementProfile","RSI","RSI_Tier"]]
         .head(50)
         .style.format({"Balance": "€{:,.2f}", "EstimatedSalary": "€{:,.2f}"})
-        .applymap(lambda v: "background-color:#FADBD8" if v == 1 else "",
+        .map(lambda v: "background-color:#FADBD8" if v == 1 else "",
                   subset=["Exited"]),
         use_container_width=True, hide_index=True
     )

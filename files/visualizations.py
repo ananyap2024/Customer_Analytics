@@ -34,6 +34,7 @@ def bar_profile_churn(df_summary):
                  color="EngagementProfile", color_discrete_sequence=PALETTE,
                  text="ChurnRate", labels={"ChurnRate": "Churn Rate (%)"})
     fig.update_traces(texttemplate="%{text:.1f}%", textposition="outside")
+    fig.update_layout(showlegend=False)
     return _style(fig, "Churn Rate by Engagement Profile")
 
 
@@ -43,7 +44,7 @@ def pie_engagement_distribution(df):
     fig = px.pie(counts, names="Profile", values="Count",
                  color_discrete_sequence=PALETTE, hole=0.4)
     fig.update_traces(textinfo="percent+label")
-    return _style(fig, "Engagement Profile Distribution")
+    return _style(fig, "Engagement Profile<br>Distribution")
 
 
 def line_tenure_churn(df_tenure):
@@ -154,6 +155,7 @@ def bar_rsi_churn(df_rsi):
                  color="RSI_Tier", color_discrete_sequence=PALETTE,
                  text="ChurnRate", labels={"ChurnRate": "Churn Rate (%)"})
     fig.update_traces(texttemplate="%{text:.1f}%", textposition="outside")
+    fig.update_layout(showlegend=False)
     return _style(fig, "Churn Rate by Relationship Strength Index Tier")
 
 
@@ -162,6 +164,7 @@ def bar_tier_retention(df_tier):
                  color="EngagementTier", color_discrete_sequence=PALETTE,
                  text="RetentionRate", labels={"RetentionRate": "Retention Rate (%)"})
     fig.update_traces(texttemplate="%{text:.1f}%", textposition="outside")
+    fig.update_layout(showlegend=False)
     return _style(fig, "Retention Rate by Engagement Tier")
 
 

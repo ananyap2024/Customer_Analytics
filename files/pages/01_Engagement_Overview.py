@@ -5,7 +5,8 @@ Module 1: Engagement vs Churn Overview
 
 import streamlit as st
 import sys, os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, BASE_DIR)
 
 from data_loader     import load_data, dataset_summary
 from engagement      import (classify_engagement, engagement_retention_ratio,

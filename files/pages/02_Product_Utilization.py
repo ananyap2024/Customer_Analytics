@@ -6,7 +6,8 @@ Key insight: 3-product cliff — 82.71% churn at 3 products, 100% at 4.
 
 import streamlit as st
 import sys, os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, BASE_DIR)
 
 import plotly.graph_objects as go
 from data_loader      import load_data

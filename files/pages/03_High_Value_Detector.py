@@ -77,7 +77,7 @@ if len(at_risk_df) > 0:
         at_risk_df[display_cols].sort_values("Balance", ascending=False).head(100)
         .style
         .format({"Balance": "€{:,.2f}", "EstimatedSalary": "€{:,.2f}"})
-        .applymap(lambda v: "background-color:#FADBD8" if v == 1 else "", subset=["Exited"]),
+        .map(lambda v: "background-color:#FADBD8" if v == 1 else "", subset=["Exited"]),
         use_container_width=True, hide_index=True
     )
     st.download_button(
